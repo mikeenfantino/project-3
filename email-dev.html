@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><!-- Gmail and Outlook use by default | Avoid quirks native to those clients -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Project 3 | Email</title>
+
+		<style type="text/css">
+
+			/* Reset Styles */
+			body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+			table{border-collapse:collapse;}
+			img, a img{border:0; outline:none; text-decoration:none;}
+			h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+
+			/* Client-Specific Styles */
+			.ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+			table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+			#outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+			img{-ms-interpolation-mode:bicubic;} /* Force IE to smoothly render resized images. */
+			body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+			/* General Styles */
+			body, #bodyTable{background-color:#00171f;}
+			#emailContainer{width:100%;}
+
+			h1, h2, h3{font-family:Tahoma, sans-serif;}
+			h1, h1 a{color:#000000; font-size:24px; font-weight:700; line-height:125%;}
+			h2, h2 a{color:#000000; font-size:18px; font-weight:700; line-height:125%;}
+			h3, h3 a{color:#000000; font-size:14px; font-weight:700; line-height:125%;}
+
+			/* Sections that hold text */
+			.boxTop, .boxHeading, .boxContent, .callToActionButtonContent, .colHeading, .colContent, .colCallToAction, .colHeading, .colContent, .iconListItemHeading, .iconListItemContent, #footerContent{font-family:Tahoma, sans-serif;}
+
+			/* Global Container */
+			.globalContainer{padding-top:0px; padding-right:0px padding-bottom:0px; padding-left:0px;}
+
+			/* Header Container */
+			#headerContainer{background-color:#00171f; padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
+			/* Header Block */
+			#headerLogoContainer{padding-top:20px; padding-right:0px; padding-bottom:20px; padding-left:0px;}
+			#headerLogoContainer a{color:#ffffff;}
+			#headerLogo{display:block;}
+
+			/* Hero Image Block */
+			.heroImage{display:block; background-color:#ffffff;}
+
+			/* Box Block */
+			.boxBlock{background-color:#ffffff;}
+			.boxTop{color:#000000; font-size:72px; font-weight:bold; line-height:100%; padding-top:50px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.boxTop img{display:block;}
+			.boxHeading{padding-top:20px; padding-right:75px; padding-bottom:20px; padding-left:75px;}
+			.boxContent{color:#000000; font-size:14px; line-height:150%; padding-top:0px; padding-right:75px; padding-bottom:0px; padding-left:75px;}
+			/* Modifiers */
+			.boxBlock.boldBg{background-color:#007ea7;}
+			.boxTop.icon{font-size:14px; font-weight:normal;}
+			.boxHeading.paddTopLg{padding-top:50px;}
+			.boxHeading.lightText h1{color:#ffffff;}
+			.boxContent.paddBottomLg{padding-bottom:50px;}
+			.boxContent.lightText{color:#ffffff;}
+
+			/* Call to Action Block */
+			.callToActionBlock{background-color:#ffffff;}
+			/* Call to Action Button Container */
+			.callToActionButtonContainer{padding-top:40px; padding-right:0px; padding-bottom:40px; padding-left:0px;}
+			/* Call to Action Button */
+			.callToActionButton{background-color:#00a8e8; border-radius:5px; box-shadow:0px 3px 0px #005d82;}
+			.callToActionButtonContent{padding-top:20px; padding-right:40px; padding-bottom:20px; padding-left:40px;}
+			.callToActionButtonContent, .callToActionButtonContent a{color:#ffffff; display:block; font-size:18px; font-weight:bold; line-height:100%; letter-spacing:2px; text-align:center; text-decoration:none;}
+			/* Modifiers */
+			.callToActionButtonContainer.paddTopSm{padding-top:30px; padding-bottom:3px;}
+			.callToActionButtonContainer.paddSm{padding-top:30px; padding-right:30px; padding-bottom:30px; padding-left:30px;}
+
+			/* Two Col Block */
+			.twoColBlock{background-color:#ffffff;}
+			.twoColContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			/* Col Content Block */
+			.colContentBlock{background-color:#ebebeb;}
+			.colContentContainer{padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
+			/* Col Block */
+			.colHeading{padding-top:0px; padding-right:0px; padding-bottom:10px; padding-left:0px;}
+			.colContent{color:#000000; font-size:14px; line-height:150%; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.colCallToAction{padding-top:10px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.colCallToAction, .colCallToAction a{color:#00a8e8; font-size:14px; font-weight:bold; line-height:100%; letter-spacing:0px;}
+			/* Col Image Block */
+			.colImageBlock{background-color:#ffffff;}
+			.colImageContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.colImage{display:block;}
+
+			/* Collage Block */
+			.collageBlock{background-color:#ffffff;}
+			.collageImageContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.collageTwoColImageBlock{background-color:#ffffff;}
+			.collageTwoColImageContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.collageImage{display:block;}
+
+			/* Two Col List Block */
+			.twoColListBlock{background-color:#ffffff;}
+			.twoColListContainer{padding-top:0px; padding-right:15px; padding-bottom:20px; padding-left:30px;}
+			.twoColListContainer:nth-child(even){padding-right:30px; padding-left:15px;}
+			/* Icon List Block */
+			.iconListImg{padding-top:2px;}
+			.iconListImg img{display:block;}
+			.iconListItemContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:15px;}
+			/* Icon List Item Block */
+			.iconListItemHeading{padding-top:0px; padding-right:0px; padding-bottom:10px; padding-left:0px;}
+			.iconListItemContent{color:#000000; font-size:14px; line-height:150%; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			/* Modifiers */
+			.twoColListContainer.paddBottomLg{padding-bottom:50px;}
+
+			/* Footer Container */
+			#footerContainer{background-color:#00171f; padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
+			/* Footer Block */
+			#footerBlock{background-color:#00171f;}
+			#footerContent{color:#ffffff; font-size:12px; line-height:150%; padding-top:20px; padding-right:0px; padding-bottom:10px; padding-left:0px;}
+			#footerSocialContainer{padding-top:0px; padding-right:0px; padding-bottom:20px; padding-left:0px;}
+			.footerSocialIcons{padding-top:0px; padding-right:10px; padding-bottom:0px; padding-left:10px;}
+			.footerSocialIcons a{color:#ffffff;}
+			.footerSocialIcons img{display:block;}
+
+			/* Responsive CSS */
+			@media only screen and (max-width: 600px) {
+
+				/* Client-Specific Styles */
+				body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+
+				td[id="headerLogoContainer"] {
+					padding-top:10px !important;
+					padding-bottom:10px !important;
+				}
+
+				table[id="headerBlock"],
+				table[class*="boxBlock"],
+				table[class="collageBlock"],
+				table[class="collageTwoColImageBlock"],
+				table[class="callToActionBlock"],
+				table[class="twoColBlock"],
+				table[class="twoColListBlock"],
+				table[id="footerBlock"] {
+					max-width:600px !important; width:100% !important;
+				}
+
+				table[class="twoColRowBlock"] {
+					max-width:300px !important; width:100% !important;
+				}
+
+				img[class="heroImage"],
+				img[class="collageImage"] {
+					height:auto !important;
+					max-width:600px !important;
+					width:100% !important;
+				}
+
+				img[class="colImage"]{
+					height:auto !important;
+					max-width:300px !important;
+					width:100% !important;
+				}
+
+				table[class="colImageBlock"] {
+					display: block !important;
+				}
+
+				td[class*="twoColListContainer"] {
+					display: block !important;
+					padding-top:0px !important;
+					padding-right:10px !important;
+					padding-bottom:50px !important;
+					padding-left:10px !important;
+				}
+
+				td[class*="boxHeading"],
+				td[class*="boxContent"],
+				td[class*="callToActionButtonContainer"] {
+					padding-right:10px !important;
+					padding-left:10px !important;
+				}
+
+				table[class="callToActionButton"] {
+					width:100% !important;
+				}
+
+				td[class="callToActionButtonColContainer"] {
+					display: block !important;
+					padding-bottom: 10px !important;
+				}
+
+				td[class="callToActionButtonColContainer"]:last-child {
+					padding-bottom: 0px !important;
+				}
+
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<center>
+			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable"><!-- Purpose of table is to mimic body tag | Major web based email clients strip body tag -->
+				<tr>
+					<td align="center" valign="top" id="bodyCell">
+
+						<!-- Start email scaffold | Table containing rows for each section | Content blocks placed in rows independent and modular -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
+							<tr>
+								<td align="center" valign="top" id="headerContainer">
+
+									<!-- Start header block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" id="headerBlock">
+										<tr>
+											<td align="center" valign="top" id="headerLogoContainer">
+												<a href="##" target="_blank" title="Project 3">
+													<img src="https://mikeenfantino.github.io/project-3/img/emailer-logo.png" alt="Project 3" height="61" width="42" id="headerLogo" />
+												</a>
+											</td>
+										</tr>
+									</table>
+									<!-- End header block  -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start hero image block -->
+									<img src="https://mikeenfantino.github.io/project-3/img/emailer-hero.jpg" alt="Good Idea!" height="417" width="600" class="heroImage" />
+									<!-- End hero image block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxTop">
+												1
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxHeading">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxTop">
+												2
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxHeading">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxTop">
+												3
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxHeading">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxHeading paddTopLg">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="callToActionButtonContainer paddTopSm">
+
+												<!-- Start call to action button -->
+												<table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+													<tr>
+														<td align="center" valign="top" class="callToActionButtonContent">
+															<a href="##" target="_blank" title="CALL TO ACTION">CALL TO ACTION</a>
+														</td>
+													</tr>
+												</table>
+												<!-- End call to action button -->
+
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxHeading paddTopLg">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent paddBottomLg">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start collage block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="collageBlock">
+										<tr>
+											<td align="center" valign="top" class="collageImageContainer">
+
+												<img src="https://mikeenfantino.github.io/project-3/img/emailer-working1.jpg" alt="Working at Whiteboard" height="300" width="600" class="collageImage" />
+
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="collageImageContainer">
+
+												<!-- Start collage two col image block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="600" class="collageTwoColImageBlock">
+													<tr>
+														<td align="center" valign="top" class="collageTwoColImageContainer">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-working2.jpg" alt="Looking at Ideas" height="300" width="300" class="collageImage" />
+														</td>
+														<td align="center" valign="top" class="collageTwoColImageContainer">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-working3.jpg" alt="Whiteboard Work" height="300" width="300" class="collageImage" />
+														</td>
+													</tr>
+												</table>
+												<!-- End collage two col image block -->
+
+
+											</td>
+										</tr>
+									</table>
+									<!-- End collage block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start call to action block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="callToActionBlock">
+										<tr>
+											<td align="center" valign="top" class="callToActionButtonContainer">
+
+												<!-- Start call to action button -->
+												<table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+													<tr>
+														<td align="center" valign="top" class="callToActionButtonContent">
+															<a href="##" target="_blank" title="CALL TO ACTION">CALL TO ACTION</a>
+														</td>
+													</tr>
+												</table>
+												<!-- End call to action button -->
+
+											</td>
+										</tr>
+									</table>
+									<!-- End call to action block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start two col block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
+										<tr>
+											<td align="center" valign="top" class="twoColContainer">
+
+												<!-- Start two col row block -->
+												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock">
+													<tr>
+														<td align="center" valign="top">
+
+															<!-- Start col image block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colImageBlock">
+																<tr>
+																	<td align="center" valign="top" class="colImageContainer">
+																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-think.jpg" alt="Think Outside of the Box" height="300" width="300" class="colImage" />
+																	</td>
+																</tr>
+															</table>
+															<!-- End col image block -->
+
+															<!-- Start col content block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colContentBlock">
+																<tr>
+																	<td align="left" valign="middle" class="colContentContainer">
+
+																		<!-- Start col block -->
+																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
+																			<tr>
+																				<td align="left" valign="top" class="colHeading">
+																					<h2>Lorem ipsum dolor sit amet</h2>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="top" class="colContent">
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+
+																				</td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="top" class="colCallToAction">
+																					<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
+																				</td>
+																			</tr>
+																		</table>
+																		<!-- End col block -->
+
+																	</td>
+																</tr>
+															</table>
+															<!-- End col content block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End two col row block -->
+
+											</td>
+										</tr>
+
+									</table>
+									<!-- End two col block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start two col block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
+										<tr>
+											<td align="center" valign="top" class="twoColContainer">
+
+												<!-- Start two col row block -->
+												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock">
+													<tr>
+														<td align="center" valign="top">
+
+															<!-- Start col image block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colImageBlock">
+																<tr>
+																	<td align="center" valign="top" class="colImageContainer">
+																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-ideas.jpg" alt="Ideas" height="300" width="300" class="colImage" />
+																	</td>
+																</tr>
+															</table>
+															<!-- End col image block -->
+
+															<!-- Start col content block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colContentBlock">
+																<tr>
+																	<td align="left" valign="middle" class="colContentContainer">
+
+																		<!-- Start col block -->
+																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
+																			<tr>
+																				<td align="left" valign="top" class="colHeading">
+																					<h2>Lorem ipsum dolor sit amet</h2>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="top" class="colContent">
+																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																				</td>
+																			</tr>
+																			<tr>
+																				<td align="left" valign="top" class="colCallToAction">
+																					<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
+																				</td>
+																			</tr>
+																		</table>
+																		<!-- End col block -->
+
+																	</td>
+																</tr>
+															</table>
+															<!-- End col content block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End two col row block -->
+
+											</td>
+										</tr>
+
+									</table>
+									<!-- End two col block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock">
+										<tr>
+											<td align="center" valign="top" class="boxHeading paddTopLg">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent paddBottomLg">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start two col list block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColListBlock">
+										<tr>
+											<td align="center" valign="top" class="twoColListContainer">
+
+												<!-- Start icon list block -->
+												<table border="0" cellpadding="0" cellspacing="0" class="iconListBlock">
+													<tr>
+														<td align="left" valign="top" width="50" class="iconListImg">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-project-icon.png" width="50" height="50" alt="Project Diagram" />
+														</td>
+														<td align="left" valign="top" width="190" class="iconListItemContainer">
+
+															<!-- Start icon list item block -->
+															<table border="0" cellpadding="0" cellspacing="0" class="iconListItemBlock">
+																<tr>
+																	<td align="left" valign="top" class="iconListItemHeading">
+																		<h3>Lorem ipsum dolor</h3>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="iconListItemContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+															</table>
+															<!-- End icon list item block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End icon list block -->
+
+											</td>
+											<td align="center" valign="top" class="twoColListContainer">
+
+												<!-- Start icon list block -->
+												<table border="0" cellpadding="0" cellspacing="0" class="iconListBlock">
+													<tr>
+														<td align="left" valign="top" width="50" class="iconListImg">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-highlighter-icon.png" width="50" height="50" alt="Highlighter" />
+														</td>
+														<td align="left" valign="top" width="190" class="iconListItemContainer">
+
+															<!-- Start icon list item block -->
+															<table border="0" cellpadding="0" cellspacing="0" class="iconListItemBlock">
+																<tr>
+																	<td align="left" valign="top" class="iconListItemHeading">
+																		<h3>Lorem ipsum dolor</h3>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="iconListItemContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+															</table>
+															<!-- End icon list item block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End icon list block -->
+
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="twoColListContainer paddBottomLg">
+
+												<!-- Start icon list block -->
+												<table border="0" cellpadding="0" cellspacing="0" class="iconListBlock">
+													<tr>
+														<td align="left" valign="top" width="50" class="iconListImg">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-thumbtack-icon.png" width="50" height="50" alt="Thumbtack" />
+														</td>
+														<td align="left" valign="top" width="190" class="iconListItemContainer">
+
+															<!-- Start icon list item block -->
+															<table border="0" cellpadding="0" cellspacing="0" class="iconListItemBlock">
+																<tr>
+																	<td align="left" valign="top" class="iconListItemHeading">
+																		<h3>Lorem ipsum dolor</h3>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="iconListItemContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+															</table>
+															<!-- End icon list item block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End icon list block -->
+
+											</td>
+											<td align="center" valign="top" class="twoColListContainer paddBottomLg">
+
+												<!-- Start icon list block -->
+												<table border="0" cellpadding="0" cellspacing="0"class="iconListBlock">
+													<tr>
+														<td align="left" valign="top" width="50" class="iconListImg">
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-comment-icon.png" width="50" height="50" alt="Comment" />
+														</td>
+														<td align="left" valign="top" width="190" class="iconListItemContainer">
+
+															<!-- Start icon list item block -->
+															<table border="0" cellpadding="0" cellspacing="0" class="iconListItemBlock">
+																<tr>
+																	<td align="left" valign="top" class="iconListItemHeading">
+																		<h3>Lorem ipsum dolor</h3>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="iconListItemContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+															</table>
+															<!-- End icon list item block -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End icon list block -->
+
+											</td>
+										</tr>
+									</table>
+									<!-- End two col list block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" class="globalContainer">
+
+									<!-- Start box block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock boldBg">
+										<tr>
+											<td align="center" valign="top" class="boxTop icon">
+												<img src="https://mikeenfantino.github.io/project-3/img/emailer-paper-plane.png" alt="Paper Plane" height="72" width="72" />
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxHeading lightText">
+												<h1>Lorem ipsum dolor sit amet</h1>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="boxContent lightText">
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex. Morbi mi augue, pretium non malesuada quis, aliquet ut nunc. Integer et imperdiet odio. Sed urna orci, blandit id malesuada eu, posuere id justo.
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" class="callToActionButtonContainer paddSm">
+
+												<!-- Start call to action button block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="100%" class="callToActionButtonBlock">
+													<tr>
+														<td align="left" valign="top" class="callToActionButtonColContainer">
+
+															<!-- Start call to action button -->
+															<table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+																<tr>
+																	<td align="center" valign="top" class="callToActionButtonContent">
+																		<a href="##" target="_blank" title="CALL TO ACTION">CALL TO ACTION</a>
+																	</td>
+																</tr>
+															</table>
+															<!-- End call to action button -->
+
+														</td>
+														<td align="right" valign="top" class="callToActionButtonColContainer">
+
+															<!-- Start call to action button -->
+															<table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+																<tr>
+																	<td align="center" valign="top" class="callToActionButtonContent">
+																		<a href="##" target="_blank" title="CALL TO ACTION">CALL TO ACTION</a>
+																	</td>
+																</tr>
+															</table>
+															<!-- End call to action button -->
+
+														</td>
+													</tr>
+												</table>
+												<!-- End call to action button block -->
+
+											</td>
+										</tr>
+									</table>
+									<!-- End box block -->
+
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" id="footerContainer">
+
+									<!-- Start footer block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" id="footerBlock">
+										<tr>
+											<td align="center" valign="top" id="footerContent">
+												&copy;Project 3 - All Rights Reserved.
+											</td>
+										</tr>
+										<tr>
+											<td align="center" valign="top" id="footerSocialContainer">
+
+												<!-- Start footer social block -->
+												<table border="0" cellpadding="0" cellspacing="0" id="footerSocialBlock">
+													<tr>
+														<td align="center" valign="middle" class="footerSocialIcons">
+															<a href="##" target="_blank" title="Twitter">
+																<img src="https://mikeenfantino.github.io/project-3/img/emailer-twitter.png" width="30" height="25" alt="Twitter" />
+															</a>
+														</td>
+														<td align="center" valign="middle" class="footerSocialIcons">
+															<a href="##" target="_blank" title="Instagram">
+																<img src="https://mikeenfantino.github.io/project-3/img/emailer-instagram.png" width="27" height="27" alt="Instagram" />
+															</a>
+														</td>
+													</tr>
+												</table>
+												<!-- End footer social block -->
+
+											</td>
+										</tr>
+									</table>
+									<!-- End footer block -->
+
+								</td>
+							</tr>
+						</table>
+						<!-- End email scaffold | Table containing rows for each section | Content blocks placed in rows independent and modular -->
+
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+</html>
