@@ -19,8 +19,13 @@
 				body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
 
 				td[id="headerLogoContainer"] {
-					padding-top:10px !important;
-					padding-bottom:10px !important;
+					padding-top: 10px !important;
+					padding-bottom: 10px !important;
+				}
+
+				img[id="headerLogo"] {
+					height: auto !important;
+					width: 21px !important;
 				}
 
 				table[id="headerBlock"],
@@ -28,50 +33,66 @@
 				table[class="collageBlock"],
 				table[class="collageTwoColImageBlock"],
 				table[class="callToActionBlock"],
-				table[class="twoColBlock"],
+				table[class="twoColCtaBlock"],
 				table[class="twoColListBlock"],
 				table[id="footerBlock"] {
-					max-width:600px !important; width:100% !important;
+					max-width: 600px !important;
+					width: 100% !important;
 				}
 
-				table[class="twoColRowBlock"] {
-					max-width:300px !important; width:100% !important;
+				table[class="twoColBlock"] {
+					max-width: 300px !important;
+					width: 100% !important;
+				}
+
+				td[class*="twoColCtaContainer"] {
+					padding-top: 50px !important;
+				}
+
+				td[class="twoColCtaContainer noPadding"] {
+					padding-top: 0px !important;
+				}
+
+				td[class="twoColImgContainer"] {
+					display: block !important;
+				}
+
+				td[class="twoColContentContainer"] {
+					display: block !important;
+					padding-top: 20px !important;
+					padding-bottom: 20px !important;
 				}
 
 				img[class="heroImage"],
 				img[class="collageImage"] {
-					height:auto !important;
-					max-width:600px !important;
-					width:100% !important;
+					height: auto !important;
+					max-width: 600px !important;
+					width: 100% !important;
 				}
 
 				img[class="colImage"]{
-					height:auto !important;
-					max-width:300px !important;
-					width:100% !important;
-				}
-
-				table[class="colImageBlock"] {
-					display: block !important;
+					height: auto !important;
+					max-width: 300px !important;
+					width: 100% !important;
 				}
 
 				td[class*="twoColListContainer"] {
 					display: block !important;
-					padding-top:0px !important;
-					padding-right:10px !important;
-					padding-bottom:50px !important;
-					padding-left:10px !important;
+					padding-top: 0px !important;
+					padding-right: 10px !important;
+					padding-bottom: 50px !important;
+					padding-left: 10px !important;
 				}
 
 				td[class*="boxHeading"],
 				td[class*="boxContent"],
 				td[class*="callToActionButtonContainer"] {
-					padding-right:10px !important;
-					padding-left:10px !important;
+					padding-right: 10px !important;
+					padding-left: 10px !important;
 				}
 
 				table[class="callToActionButton"] {
-					width:100% !important;
+					width: 100% !important;
 				}
 
 				td[class="callToActionButtonColContainer"] {
@@ -114,7 +135,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start hero image block -->
 									<img src="https://mikeenfantino.github.io/project-3/img/emailer-hero.jpg" alt="Good Idea!" height="417" width="600" class="heroImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;display: block;background-color: #ffffff;">
@@ -123,7 +144,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -148,7 +169,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -173,7 +194,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -198,7 +219,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -233,7 +254,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -253,7 +274,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start collage block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="collageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -289,7 +310,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start call to action block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="callToActionBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -314,140 +335,102 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
-									<!-- Start two col block -->
-									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
+									<!-- Start two col cta block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColCtaBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
 										<tr>
-											<td align="center" valign="top" class="twoColContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+											<td align="center" valign="top" class="twoColCtaContainer noPadding" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
-												<!-- Start two col row block -->
-												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<!-- Start two col block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
 													<tr>
-														<td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+														<td align="center" valign="top" class="twoColImgContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 															<!-- Start col image block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
-																<tr>
-																	<td align="center" valign="top" class="colImageContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
-																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-think.jpg" alt="Think Outside of the Box" height="300" width="300" class="colImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;display: block;">
-																	</td>
-																</tr>
-															</table>
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-think.jpg" alt="Think Outside of the Box" height="300" width="300" class="colImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;display: block;">
 															<!-- End col image block -->
 
-															<!-- Start col content block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colContentBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ebebeb;">
+														</td>
+														<td align="center" valign="middle" class="twoColContentContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ebebeb;padding-top: 0px;padding-right: 20px;padding-bottom: 0px;padding-left: 20px;">
+
+															<!-- Start col block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 																<tr>
-																	<td align="left" valign="middle" class="colContentContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 20px;padding-bottom: 0px;padding-left: 20px;">
-
-																		<!-- Start col block -->
-																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-																			<tr>
-																				<td align="left" valign="top" class="colHeading" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 0px;padding-right: 0px;padding-bottom: 10px;padding-left: 0px;">
-																					<h2 style="margin: 0;padding: 0;font-family: Tahoma, sans-serif;color: #000000;font-size: 18px;font-weight: 700;line-height: 125%;">Lorem ipsum dolor sit amet</h2>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;color: #000000;font-size: 14px;line-height: 150%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
-																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
-
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colCallToAction" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 10px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">
-																					<a href="##" target="_blank" title="Call to Action Link" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">Call to Action Link</a>
-																				</td>
-																			</tr>
-																		</table>
-																		<!-- End col block -->
+																	<td align="left" valign="top" class="colHeading" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 0px;padding-right: 0px;padding-bottom: 10px;padding-left: 0px;">
+																		<h2 style="margin: 0;padding: 0;font-family: Tahoma, sans-serif;color: #000000;font-size: 18px;font-weight: 700;line-height: 125%;">Lorem ipsum dolor sit amet</h2>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;color: #000000;font-size: 14px;line-height: 150%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
 
 																	</td>
 																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colCallToAction" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 10px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">
+																		<a href="##" target="_blank" title="Call to Action Link" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">Call to Action Link</a>
+																	</td>
+																</tr>
 															</table>
-															<!-- End col content block -->
+															<!-- End col block -->
 
 														</td>
 													</tr>
 												</table>
-												<!-- End two col row block -->
+												<!-- End two col block -->
 
 											</td>
 										</tr>
-
-									</table>
-									<!-- End two col block -->
-
-								</td>
-							</tr>
-							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
-
-									<!-- Start two col block -->
-									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
 										<tr>
-											<td align="center" valign="top" class="twoColContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+											<td align="center" valign="top" class="twoColCtaContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 
-												<!-- Start two col row block -->
-												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+												<!-- Start two col block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
 													<tr>
-														<td align="center" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+														<td align="center" valign="middle" class="twoColContentContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ebebeb;padding-top: 0px;padding-right: 20px;padding-bottom: 0px;padding-left: 20px;">
+
+															<!-- Start col block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+																<tr>
+																	<td align="left" valign="top" class="colHeading" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 0px;padding-right: 0px;padding-bottom: 10px;padding-left: 0px;">
+																		<h2 style="margin: 0;padding: 0;font-family: Tahoma, sans-serif;color: #000000;font-size: 18px;font-weight: 700;line-height: 125%;">Lorem ipsum dolor sit amet</h2>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;color: #000000;font-size: 14px;line-height: 150%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colCallToAction" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 10px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">
+																		<a href="##" target="_blank" title="Call to Action Link" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">Call to Action Link</a>
+																	</td>
+																</tr>
+															</table>
+															<!-- End col block -->
+
+														</td>
+														<td align="center" valign="top" class="twoColImgContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 															<!-- Start col image block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colImageBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
-																<tr>
-																	<td align="center" valign="top" class="colImageContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
-																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-ideas.jpg" alt="Ideas" height="300" width="300" class="colImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;display: block;">
-																	</td>
-																</tr>
-															</table>
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-ideas.jpg" alt="Ideas" height="300" width="300" class="colImage" style="border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;display: block;">
 															<!-- End col image block -->
-
-															<!-- Start col content block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colContentBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ebebeb;">
-																<tr>
-																	<td align="left" valign="middle" class="colContentContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 20px;padding-bottom: 0px;padding-left: 20px;">
-
-																		<!-- Start col block -->
-																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-																			<tr>
-																				<td align="left" valign="top" class="colHeading" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 0px;padding-right: 0px;padding-bottom: 10px;padding-left: 0px;">
-																					<h2 style="margin: 0;padding: 0;font-family: Tahoma, sans-serif;color: #000000;font-size: 18px;font-weight: 700;line-height: 125%;">Lorem ipsum dolor sit amet</h2>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colContent" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;color: #000000;font-size: 14px;line-height: 150%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
-																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colCallToAction" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: Tahoma, sans-serif;padding-top: 10px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">
-																					<a href="##" target="_blank" title="Call to Action Link" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00a8e8;font-size: 14px;font-weight: bold;line-height: 100%;letter-spacing: 0px;">Call to Action Link</a>
-																				</td>
-																			</tr>
-																		</table>
-																		<!-- End col block -->
-
-																	</td>
-																</tr>
-															</table>
-															<!-- End col content block -->
 
 														</td>
 													</tr>
 												</table>
-												<!-- End two col row block -->
+												<!-- End two col block -->
 
 											</td>
 										</tr>
-
 									</table>
-									<!-- End two col block -->
+									<!-- End two col cta block -->
 
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -467,7 +450,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start two col list block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColListBlock" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;">
@@ -605,7 +588,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px padding-bottom:0px;padding-left: 0px;">
+								<td align="center" valign="top" class="globalContainer" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;">
 
 									<!-- Start box block -->
 									<table border="0" cellpadding="0" cellspacing="0" width="600" class="boxBlock boldBg" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #007ea7;">

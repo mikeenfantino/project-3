@@ -34,7 +34,7 @@
 			.boxTop, .boxHeading, .boxContent, .callToActionButtonContent, .colHeading, .colContent, .colCallToAction, .colHeading, .colContent, .iconListItemHeading, .iconListItemContent, #footerContent{font-family:Tahoma, sans-serif;}
 
 			/* Global Container */
-			.globalContainer{padding-top:0px; padding-right:0px padding-bottom:0px; padding-left:0px;}
+			.globalContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
 
 			/* Header Container */
 			#headerContainer{background-color:#00171f; padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
@@ -72,20 +72,17 @@
 			.callToActionButtonContainer.paddTopSm{padding-top:30px; padding-bottom:3px;}
 			.callToActionButtonContainer.paddSm{padding-top:30px; padding-right:30px; padding-bottom:30px; padding-left:30px;}
 
-			/* Two Col Block */
+			/* Two Col CTA Block */
+			.twoColCtaBlock{background-color:#ffffff;}
 			.twoColBlock{background-color:#ffffff;}
-			.twoColContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
-			/* Col Content Block */
-			.colContentBlock{background-color:#ebebeb;}
-			.colContentContainer{padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
+			.twoColImgContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
+			.twoColContentContainer{background-color:#ebebeb; padding-top:0px; padding-right:20px; padding-bottom:0px; padding-left:20px;}
 			/* Col Block */
 			.colHeading{padding-top:0px; padding-right:0px; padding-bottom:10px; padding-left:0px;}
 			.colContent{color:#000000; font-size:14px; line-height:150%; padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
 			.colCallToAction{padding-top:10px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
 			.colCallToAction, .colCallToAction a{color:#00a8e8; font-size:14px; font-weight:bold; line-height:100%; letter-spacing:0px;}
 			/* Col Image Block */
-			.colImageBlock{background-color:#ffffff;}
-			.colImageContainer{padding-top:0px; padding-right:0px; padding-bottom:0px; padding-left:0px;}
 			.colImage{display:block;}
 
 			/* Collage Block */
@@ -126,8 +123,13 @@
 				body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
 
 				td[id="headerLogoContainer"] {
-					padding-top:10px !important;
-					padding-bottom:10px !important;
+					padding-top: 10px !important;
+					padding-bottom: 10px !important;
+				}
+
+				img[id="headerLogo"] {
+					height: auto !important;
+					width: 21px !important;
 				}
 
 				table[id="headerBlock"],
@@ -135,50 +137,66 @@
 				table[class="collageBlock"],
 				table[class="collageTwoColImageBlock"],
 				table[class="callToActionBlock"],
-				table[class="twoColBlock"],
+				table[class="twoColCtaBlock"],
 				table[class="twoColListBlock"],
 				table[id="footerBlock"] {
-					max-width:600px !important; width:100% !important;
+					max-width: 600px !important;
+					width: 100% !important;
 				}
 
-				table[class="twoColRowBlock"] {
-					max-width:300px !important; width:100% !important;
+				table[class="twoColBlock"] {
+					max-width: 300px !important;
+					width: 100% !important;
+				}
+
+				td[class*="twoColCtaContainer"] {
+					padding-top: 50px !important;
+				}
+
+				td[class="twoColCtaContainer noPadding"] {
+					padding-top: 0px !important;
+				}
+
+				td[class="twoColImgContainer"] {
+					display: block !important;
+				}
+
+				td[class="twoColContentContainer"] {
+					display: block !important;
+					padding-top: 20px !important;
+					padding-bottom: 20px !important;
 				}
 
 				img[class="heroImage"],
 				img[class="collageImage"] {
-					height:auto !important;
-					max-width:600px !important;
-					width:100% !important;
+					height: auto !important;
+					max-width: 600px !important;
+					width: 100% !important;
 				}
 
 				img[class="colImage"]{
-					height:auto !important;
-					max-width:300px !important;
-					width:100% !important;
-				}
-
-				table[class="colImageBlock"] {
-					display: block !important;
+					height: auto !important;
+					max-width: 300px !important;
+					width: 100% !important;
 				}
 
 				td[class*="twoColListContainer"] {
 					display: block !important;
-					padding-top:0px !important;
-					padding-right:10px !important;
-					padding-bottom:50px !important;
-					padding-left:10px !important;
+					padding-top: 0px !important;
+					padding-right: 10px !important;
+					padding-bottom: 50px !important;
+					padding-left: 10px !important;
 				}
 
 				td[class*="boxHeading"],
 				td[class*="boxContent"],
 				td[class*="callToActionButtonContainer"] {
-					padding-right:10px !important;
-					padding-left:10px !important;
+					padding-right: 10px !important;
+					padding-left: 10px !important;
 				}
 
 				table[class="callToActionButton"] {
-					width:100% !important;
+					width: 100% !important;
 				}
 
 				td[class="callToActionButtonColContainer"] {
@@ -423,133 +441,95 @@
 							<tr>
 								<td align="center" valign="top" class="globalContainer">
 
-									<!-- Start two col block -->
-									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
+									<!-- Start two col cta block -->
+									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColCtaBlock">
 										<tr>
-											<td align="center" valign="top" class="twoColContainer">
+											<td align="center" valign="top" class="twoColCtaContainer noPadding">
 
-												<!-- Start two col row block -->
-												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock">
+												<!-- Start two col block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
 													<tr>
-														<td align="center" valign="top">
+														<td align="center" valign="top" class="twoColImgContainer">
 
 															<!-- Start col image block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colImageBlock">
-																<tr>
-																	<td align="center" valign="top" class="colImageContainer">
-																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-think.jpg" alt="Think Outside of the Box" height="300" width="300" class="colImage" />
-																	</td>
-																</tr>
-															</table>
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-think.jpg" alt="Think Outside of the Box" height="300" width="300" class="colImage" />
 															<!-- End col image block -->
 
-															<!-- Start col content block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colContentBlock">
+														</td>
+														<td align="center" valign="middle" class="twoColContentContainer">
+
+															<!-- Start col block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
 																<tr>
-																	<td align="left" valign="middle" class="colContentContainer">
-
-																		<!-- Start col block -->
-																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
-																			<tr>
-																				<td align="left" valign="top" class="colHeading">
-																					<h2>Lorem ipsum dolor sit amet</h2>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colContent">
-																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
-
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colCallToAction">
-																					<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
-																				</td>
-																			</tr>
-																		</table>
-																		<!-- End col block -->
+																	<td align="left" valign="top" class="colHeading">
+																		<h2>Lorem ipsum dolor sit amet</h2>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
 
 																	</td>
 																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colCallToAction">
+																		<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
+																	</td>
+																</tr>
 															</table>
-															<!-- End col content block -->
+															<!-- End col block -->
 
 														</td>
 													</tr>
 												</table>
-												<!-- End two col row block -->
+												<!-- End two col block -->
 
 											</td>
 										</tr>
-
-									</table>
-									<!-- End two col block -->
-
-								</td>
-							</tr>
-							<tr>
-								<td align="center" valign="top" class="globalContainer">
-
-									<!-- Start two col block -->
-									<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
 										<tr>
-											<td align="center" valign="top" class="twoColContainer">
+											<td align="center" valign="top" class="twoColCtaContainer">
 
-												<!-- Start two col row block -->
-												<table border="0" cellpadding="0" cellspacing="0" class="twoColRowBlock">
+												<!-- Start two col block -->
+												<table border="0" cellpadding="0" cellspacing="0" width="600" class="twoColBlock">
 													<tr>
-														<td align="center" valign="top">
+														<td align="center" valign="middle" class="twoColContentContainer">
+
+															<!-- Start col block -->
+															<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
+																<tr>
+																	<td align="left" valign="top" class="colHeading">
+																		<h2>Lorem ipsum dolor sit amet</h2>
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colContent">
+																		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
+																	</td>
+																</tr>
+																<tr>
+																	<td align="left" valign="top" class="colCallToAction">
+																		<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
+																	</td>
+																</tr>
+															</table>
+															<!-- End col block -->
+
+														</td>
+														<td align="center" valign="top" class="twoColImgContainer">
 
 															<!-- Start col image block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="right" class="colImageBlock">
-																<tr>
-																	<td align="center" valign="top" class="colImageContainer">
-																		<img src="https://mikeenfantino.github.io/project-3/img/emailer-ideas.jpg" alt="Ideas" height="300" width="300" class="colImage" />
-																	</td>
-																</tr>
-															</table>
+															<img src="https://mikeenfantino.github.io/project-3/img/emailer-ideas.jpg" alt="Ideas" height="300" width="300" class="colImage" />
 															<!-- End col image block -->
-
-															<!-- Start col content block -->
-															<table border="0" cellpadding="0" cellspacing="0" width="300" height="300" align="left" class="colContentBlock">
-																<tr>
-																	<td align="left" valign="middle" class="colContentContainer">
-
-																		<!-- Start col block -->
-																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="colBlock">
-																			<tr>
-																				<td align="left" valign="top" class="colHeading">
-																					<h2>Lorem ipsum dolor sit amet</h2>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colContent">
-																					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum, sapien a ultricies sodales, magna leo imperdiet ex, vitae tincidunt libero leo in ex.
-																				</td>
-																			</tr>
-																			<tr>
-																				<td align="left" valign="top" class="colCallToAction">
-																					<a href="##" target="_blank" title="Call to Action Link">Call to Action Link</a>
-																				</td>
-																			</tr>
-																		</table>
-																		<!-- End col block -->
-
-																	</td>
-																</tr>
-															</table>
-															<!-- End col content block -->
 
 														</td>
 													</tr>
 												</table>
-												<!-- End two col row block -->
+												<!-- End two col block -->
 
 											</td>
 										</tr>
-
 									</table>
-									<!-- End two col block -->
+									<!-- End two col cta block -->
 
 								</td>
 							</tr>
